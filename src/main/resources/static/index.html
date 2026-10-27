@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterviewIQ | AI Interview Coach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="/">Interview<span>IQ</span></a>
+        <span class="nav-label">AI INTERVIEW COACH</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">YOUR PERSONAL AI INTERVIEW COACH</p>
+            <h1>Practice smarter.<br><span>Interview better.</span></h1>
+            <p class="subtitle">
+                Answer real interview questions and get AI-powered feedback
+                to improve your confidence and skills.
+            </p>
+        </section>
+
+        <section class="workspace">
+            <div class="question-panel">
+                <div class="panel-heading">
+                    <h2>Practice Questions</h2>
+                    <span id="question-count">Loading...</span>
+                </div>
+                <div id="question-list">
+                    <p class="muted">Loading questions...</p>
+                </div>
+            </div>
+
+            <div class="answer-panel">
+                <div class="panel-heading">
+                    <h2>Your Answer</h2>
+                    <span id="selected-level">Select a question</span>
+                </div>
+
+                <div class="selected-question" id="selected-question">
+                    Select a question from the left to begin.
+                </div>
+
+                <label for="answer-text">Write your answer</label>
+                <textarea id="answer-text"
+                    placeholder="Explain your answer in your own words..."
+                    rows="8"></textarea>
+
+                <div class="answer-footer">
+                    <span id="char-count">0 characters</span>
+                    <button id="evaluate-btn" disabled>
+                        Evaluate Answer →
+                    </button>
+                </div>
+
+                <p id="status-message" role="status"></p>
+            </div>
+        </section>
+
+        <section id="results" class="results hidden">
+            <div class="results-heading">
+                <p class="eyebrow">YOUR AI REPORT</p>
+                <h2>Evaluation Results</h2>
+            </div>
+
+            <div class="score-grid">
+                <div class="score-card">
+                    <span>Technical</span>
+                    <strong id="technical-score">—</strong>
+                    <small>/ 10</small>
+                </div>
+                <div class="score-card">
+                    <span>Communication</span>
+                    <strong id="communication-score">—</strong>
+                    <small>/ 10</small>
+                </div>
+                <div class="score-card">
+                    <span>Completeness</span>
+                    <strong id="completeness-score">—</strong>
+                    <small>/ 10</small>
+                </div>
+                <div class="score-card overall">
+                    <span>Overall Score</span>
+                    <strong id="overall-score">—</strong>
+                    <small>/ 10</small>
+                </div>
+            </div>
+
+            <div class="feedback-grid">
+                <div class="feedback-card">
+                    <h3>✓ Strengths</h3>
+                    <ul id="strengths"></ul>
+                </div>
+                <div class="feedback-card">
+                    <h3>↗ Areas to Improve</h3>
+                    <ul id="weaknesses"></ul>
+                </div>
+                <div class="feedback-card suggestions">
+                    <h3>✦ Suggestions</h3>
+                    <ul id="suggestions"></ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Built to help you become interview-ready.
+            <span>Powered by AI · InterviewIQ</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
